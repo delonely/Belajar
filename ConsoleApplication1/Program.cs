@@ -22,7 +22,7 @@ namespace Awesome
 
             //Chat target= new Chat();
             //target.Id = 894604956;
-            //andi
+            //andi kaya om om
 
             
 
