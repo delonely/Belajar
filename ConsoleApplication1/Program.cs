@@ -22,7 +22,7 @@ namespace Awesome
 
             //Chat target= new Chat();
             //target.Id = 894604956;
-            //andi ampas ancene kelakuan tetep ae kaya tante tante
+            //andi kaya om om
 
             
 
@@ -36,7 +36,7 @@ namespace Awesome
                 botClient.SendTextMessageAsync(894604956, input);
             }
             
-        }
+        }//tesaksdakdadadsadsad
 
         static async void Bot_OnMessage(object sender, MessageEventArgs e)  
         {
