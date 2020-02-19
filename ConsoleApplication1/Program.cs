@@ -2,6 +2,7 @@
 using System.Threading;
 using Telegram.Bot;
 using Telegram.Bot.Args;
+using Telegram.Bot.Types;
 
 namespace Awesome
 {
@@ -19,9 +20,21 @@ namespace Awesome
               $"Hello, World! I am user {me.Id} and my name is {me.FirstName}."
             );
 
+            //Chat target= new Chat();
+            //target.Id = 894604956;
+
+            
+
             botClient.OnMessage += Bot_OnMessage;
             botClient.StartReceiving();
-            Thread.Sleep(int.MaxValue);
+
+            String input = "-";
+            while (input != "exit")
+            {
+                input=Console.ReadLine();
+                botClient.SendTextMessageAsync(894604956, input);
+            }
+            
         }
 
         static async void Bot_OnMessage(object sender, MessageEventArgs e)  
@@ -32,7 +45,7 @@ namespace Awesome
 
                 await botClient.SendTextMessageAsync(
                   chatId: e.Message.Chat,
-                  text: "You said:\n" + e.Message.Text
+                  text: "You said:\n" + e.Message.Text 
                 );
             }
         }
