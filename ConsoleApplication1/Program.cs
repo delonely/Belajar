@@ -35,7 +35,7 @@ namespace Awesome
                 botClient.SendTextMessageAsync(894604956, input);
             }
             
-        }
+        }//tesaksdakdadadsadsad
 
         static async void Bot_OnMessage(object sender, MessageEventArgs e)  
         {
